@@ -37,7 +37,7 @@ export const Home = (): JSX.Element => {
       <Header>
         <Container>
           <HeaderContent>
-            <Flex>
+            <div className="userSection">
               <UserImage
                 src={`https://github.com/${userData.githubUser}.png`}
                 alt={userData.nameUser}
@@ -46,14 +46,10 @@ export const Home = (): JSX.Element => {
                 height={"48px"}
               />
               <Text color="grey4" type="heading4">
-                <Typewriter
-                  options={{
-                    strings: `Hello, my name is ${userData.nameUser}`,
-                    autoStart: true,
-                  }}
-                />
+                Hello, my name is {userData.nameUser}
               </Text>
-            </Flex>
+            </div>
+
             <Text as="h1" type="heading1" color="grey5">
               I{" "}
               <Text as="span" type="heading1" color="brand1">
@@ -65,10 +61,12 @@ export const Home = (): JSX.Element => {
               </Text>{" "}
               projects
             </Text>
-            <Text type="body1" color="grey2">
+
+            <Text type="body1" color="brand1">
               Discover here in this environment, created especially for you, all
               my projects and technologies
             </Text>
+
             <HeaderButtonsArea>
               <Button as="a" type="primary" href="#projects">
                 See Projects
@@ -87,9 +85,14 @@ export const Home = (): JSX.Element => {
                 <FaGithub />
               </Button>
             </HeaderButtonsArea>
+
             <StackCards>
               {stackData.map((stack, index) => (
-                <Stack key={index} title={stack.title} icon={stack.img} />
+                <Stack
+                  key={index}
+                  title={stack.title}
+                  icon={stack.img}
+                />
               ))}
             </StackCards>
           </HeaderContent>

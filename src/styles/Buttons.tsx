@@ -25,6 +25,11 @@ export const Button = styled("button", {
         background: "transparent",
         borderColor: "transparent",
         fontWeight: "500",
+
+        "&:hover": {
+          color: "$brand1",
+          transition: ".5s",
+        },
       },
       primary: {
         background: "$brand1",
@@ -33,6 +38,7 @@ export const Button = styled("button", {
         "&:hover": {
           backgroundColor: "$brand2",
           borderColor: "$brand2",
+          transition: ".5s",
         },
         "@mobile": {
           height: "2.5rem",
@@ -48,6 +54,7 @@ export const Button = styled("button", {
         "&:hover": {
           backgroundColor: "$grey4",
           color: "$grey1",
+          transition: ".5s",
         },
       },
       toggleTheme: {
@@ -99,6 +106,7 @@ export const Button = styled("button", {
         },
         "&:hover": {
           backgroundColor: "$grey1",
+          transition: ".5s",
         },
       },
       circle: {
@@ -121,6 +129,7 @@ export const Button = styled("button", {
             backgroundColor: "transparent",
             borderColor: "$socialInstagram",
             color: "$socialInstagram",
+            transition: ".5s",
           },
         },
         ["&.facebook"]: {
@@ -131,6 +140,7 @@ export const Button = styled("button", {
             backgroundColor: "transparent",
             borderColor: "$socialFacebook",
             color: "$socialFacebook",
+            transition: ".5s",
           },
         },
         ["&.linkedin"]: {
@@ -141,10 +151,12 @@ export const Button = styled("button", {
             backgroundColor: "transparent",
             borderColor: "$socialLinkedin",
             color: "$socialLinkedin",
+            transition: ".5s",
           },
         },
         "&:hover": {
           backgroundColor: "$grey5",
+          transition: ".5s",
         },
         "@mobile": {
           width: "5rem",

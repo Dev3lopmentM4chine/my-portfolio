@@ -7,7 +7,7 @@ export const scaleUp = keyframes({
   "100%": { transform: "translateY(-140%)" },
 });
 
-export const StackCard = styled("div", {
+export const StackCard = styled("li", {
   borderRadius: "$1",
   background: "transparent",
   display: "flex",

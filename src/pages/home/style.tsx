@@ -1,9 +1,7 @@
 import { styled } from "@/styles/stitches.config";
 import { Flex } from "@/styles/Global";
 import { Button } from "@/styles/Buttons";
-import { css } from "@stitches/react";
 
-import meIlustration from "@/public/static/img/background/me-ilustration.svg";
 import backgroundImg from "@/public/static/img/background/header-bg.svg";
 
 import dots from "@/public/static/img/background/dots.svg";
@@ -15,6 +13,7 @@ export const Header = styled("header", {
   backgroundRepeat: "no-repeat",
   backgroundPosition: "right",
   backgroundAttachment: "fixed",
+  backgroundBlendMode:"soft-light",
   borderBottom: "2px solid $grey5",
   "@tablet": {
     backgroundPosition: "right -10% center",
@@ -29,16 +28,39 @@ export const Header = styled("header", {
 });
 
 export const HeaderContent = styled("div", {
-  maxWidth: "100%",
-  width: "36rem",
+  minWidth: "100%",
   display: "flex",
   flexDirection: "column",
+  justifyContent: "center",
+  alignItems: "center",
   gap: "$2",
+
+  "& .userSection": {
+    width: "370px",
+
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+  },
+
   "@tablet": {
-    width: "36rem",
+    width: "100%",
   },
   "@mobile": {
+    textAlign: "center",
     width: "100%",
+
+    "& .userSection": {
+      maxWidth: "320px",
+      height: "250px",
+      flexDirection: "column",
+    },
+
+    "& .userSection img": {
+      width: "200px",
+      height: "200px",
+    },
   },
 });
 
@@ -46,13 +68,11 @@ export const HeaderButtonsArea = styled(Flex, {
   marginTop: "$2",
 
   [`& ${Button}`]: {
-    marginRight: "$2",
     overflow: "hidden",
   },
 
   "@mobile": {
     [`& ${Button}`]: {
-      marginRight: "$2",
       overflow: "hidden",
       width: "100%",
     },
@@ -78,7 +98,7 @@ export const StackSection = styled("div", {
   padding: "4rem 0 2rem 0",
 });
 
-export const StackCards = styled("div", {
+export const StackCards = styled("ul", {
   display: "grid",
   gridTemplateColumns: "1fr 1fr 1fr 1fr",
   padding: "3rem 0",
@@ -94,6 +114,7 @@ export const StackCards = styled("div", {
   },
 
   "@mobileLittle": {
+    maxWidth: "100%",
     display: "flex",
     overflow: "auto",
     margin: "0 -1rem",

@@ -49,7 +49,7 @@ export const Project = (): JSX.Element => {
               as="h2"
               type="heading3"
               css={{ marginBottom: "$3" }}
-              color="grey4"
+              color="brand1"
             >
               {repository.name}
             </ProjectTitle>
